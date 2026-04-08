@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Paul | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#3bcfe9',
+                        'brand-dark': '#0a0a0a',
+                        'brand-gray': '#1a1a1a',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'pulse-soft': 'pulseSoft 3s infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        pulseSoft: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.7' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .tool-card { @apply flex flex-col items-center justify-center p-6 rounded-2xl transition-all duration-300 border border-transparent hover:border-brand-blue/40 hover:bg-brand-blue/5 hover:-translate-y-2; }
+        .tool-card i { @apply text-3xl mb-3 transition-colors; }
+        .project-card { @apply relative overflow-hidden rounded-[2rem] border border-white/5 bg-white/5 transition-all duration-500 hover:border-brand-blue/30; }
+        
+        .nav-glow { @apply relative transition-all duration-300 hover:text-brand-blue; }
+        .nav-glow:hover { filter: drop-shadow(0 0 8px rgba(59, 207, 233, 0.8)); }
+        .nav-glow::after { content: ''; @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-blue transition-all duration-300; }
+        .nav-glow:hover::after { @apply w-full; }
+    </style>
+</head>
+
+<body class="bg-brand-dark text-white selection:bg-brand-blue selection:text-brand-dark">
+
+<nav class="fixed top-0 w-full z-50 py-4 px-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center glass rounded-full px-8 py-3">
+        <div class="text-2xl font-black tracking-tighter italic text-brand-blue">JPT.</div>
+        <ul class="hidden md:flex gap-10 font-medium text-sm uppercase tracking-widest">
+            <li><a href="#home" class="nav-glow">Home</a></li>
+            <li><a href="#about" class="nav-glow">About</a></li>
+            <li><a href="#projects" class="nav-glow">Projects</a></li>
+            <li><a href="#tools" class="nav-glow">Tools</a></li>
+            <li><a href="#contact" class="nav-glow">Contact</a></li>
+        </ul>
+        <a href="#contact" class="bg-white text-black px-5 py-2 rounded-full text-xs font-bold hover:bg-brand-blue transition shadow-lg">HIRE ME</a>
+    </div>
+</nav>
+
+<section id="home" class="min-h-screen flex flex-col justify-center items-center px-6 text-center relative overflow-hidden">
+    <div class="absolute top-1/4 -left-20 w-80 h-80 bg-brand-blue/10 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-white/5 rounded-full blur-[120px]"></div>
+
+    <div class="animate-fade-in-up space-y-6">
+        <h2 class="text-brand-blue font-mono tracking-[0.3em] uppercase text-sm italic">Available for Opportunities</h2>
+        <h1 class="text-6xl md:text-8xl font-black leading-tight tracking-tighter">
+            I'M <span class="bg-gradient-to-r from-brand-blue to-white bg-clip-text text-transparent italic">JOHN PAUL</span>
+        </h1>
+        <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-400 font-light leading-relaxed">
+            Turning your <span class="text-white font-medium italic underline decoration-brand-blue">loaded work</span> into efficient, streamlined <span class="text-brand-blue font-medium">solutions</span>. 
+            I bridge the gap between technical development and high-level virtual assistance.
+        </p>
+        <div class="pt-8 flex flex-wrap justify-center gap-4">
+            <a href="#contact" class="bg-brand-blue text-brand-dark px-10 py-4 rounded-full font-black hover:scale-105 transition active:scale-95 shadow-[0_0_30px_rgba(59,207,233,0.3)]">
+                LET'S WORK TOGETHER!
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="py-32 px-6 max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="relative group">
+            <div class="absolute -inset-2 bg-brand-blue rounded-[2rem] blur opacity-20 group-hover:opacity-40 transition"></div>
+            <img src="pic/pogii.jpg" alt="Profile" class="relative rounded-[2rem] border-2 border-white/10 transition duration-700 w-full object-cover aspect-square shadow-2xl">
+        </div>
+        <div class="space-y-6">
+            <h3 class="text-4xl font-bold italic tracking-tighter">I streamline your <span class="text-brand-blue">operational workflows</span> so you can lead with clarity and focus.</h3>
+            <p class="text-gray-400 leading-relaxed text-lg">
+                As a graduating BSIT student dedicated to empowering clients through technical precision, I streamline the path from concept to completion. From navigating intensive administrative tasks to crafting polished web platforms, I take the weight of technical debt and administrative overhead off your shoulders and turn them into fully executed projects.            </p>
+            
+            <div class="glass p-6 rounded-2xl border-l-4 border-brand-blue animate-pulse-soft">
+                <p class="text-sm font-bold uppercase tracking-widest text-brand-blue mb-2 italic">The Mission</p>
+                <p class="text-white font-medium text-lg italic">"I take your loaded work and turn it into executed solutions."</p>
+            </div>
+
+            <div class="flex gap-4 pt-4">
+                <div class="glass p-4 rounded-xl flex-1 text-center border-brand-blue/20">
+                    <span class="block text-2xl font-bold text-brand-blue uppercase">GRADUATING</span>
+                    <span class="text-[10px] text-gray-500 uppercase tracking-widest">Current Status</span>
+                </div>
+                <div class="glass p-4 rounded-xl flex-1 text-center">
+                    <span class="block text-2xl font-bold text-brand-blue uppercase">DEV + VA</span>
+                    <span class="text-[10px] text-gray-500 uppercase tracking-widest">HYBRID ROLe</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="py-32 px-6 max-w-6xl mx-auto">
+    <div class="mb-16">
+        <h2 class="text-5xl font-black italic tracking-tighter mb-4">Works & Projects<span class="text-brand-blue">.</span></h2>
+        <p class="text-gray-500 font-medium tracking-wide">A showcase of my recent technical and creative works.</p>
+    </div>
+
+    <div class="max-w-xl mx-auto"> 
+        <div class="project-card group">
+            <div class="aspect-video max-h-[300px] overflow-hidden relative">
+                <img src="pic/rps.jpg" alt="Rock Paper Scissors Game" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-brand-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <a href="https://paulcandoit.netlify.app/" target="_blank" class="bg-brand-blue text-brand-dark px-10 py-4 rounded-full font-black text-sm uppercase tracking-widest shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                        Play Now <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-black italic uppercase tracking-tight">RPS: Destroy Me</h3>
+                    <span class="text-[10px] bg-brand-blue/20 text-brand-blue font-black px-3 py-1 rounded-full uppercase tracking-tighter">Web Game</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    A modern take on the classic **Rock, Paper, Scissors** game. Features a responsive dark-mode interface, real-time score tracking, and persistent win/loss statistics. 
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tools" class="py-32 bg-white text-brand-dark">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="mb-16 text-center md:text-left">
+            <h2 class="text-5xl font-black italic tracking-tighter mb-4">SKILLS & TOOLS<span class="text-brand-blue">.</span></h2>
+            <p class="text-gray-500 font-medium">A versatile toolkit for development, administration, and marketing.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <div class="tool-card bg-gray-50 group"><i class="fab fa-html5 text-orange-600 group-hover:scale-110"></i><span class="font-bold text-sm text-center">HTML5</span></div>
+            <div class="tool-card bg-gray-50 group"><i class="fab fa-css3-alt text-blue-600 group-hover:scale-110"></i><span class="font-bold text-sm text-center">CSS3 / Tailwind</span></div>
+            <div class="tool-card bg-gray-50 group"><i class="fab fa-js text-yellow-500 group-hover:scale-110"></i><span class="font-bold text-sm text-center">JavaScript</span></div>
+            <div class="tool-card bg-gray-50 group"><i class="fab fa-python text-blue-800 group-hover:scale-110"></i><span class="font-bold text-sm text-center">Python</span></div>
+            <div class="tool-card bg-gray-50 group"><i class="fas fa-database text-slate-700 group-hover:scale-110"></i><span class="font-bold text-sm text-center">SQL</span></div>
+            <div class="tool-card bg-gray-50 group"><i class="fas fa-palette text-pink-500 group-hover:scale-110"></i><span class="font-bold text-sm text-center">Canva</span></div>
+            <div class="tool-card bg-gray-50 group"><i class="fas fa-video text-gray-800 group-hover:scale-110"></i><span class="font-bold text-sm text-center">CapCut</span></div>
+            <div class="tool-card bg-gray-50 group"><i class="fas fa-sync text-cyan-600 group-hover:scale-110"></i><span class="font-bold text-sm text-center">Buffer</span></div>
+            <div class="tool-card bg-gray-50 group"><i class="fas fa-file-word text-blue-800 group-hover:scale-110"></i><span class="font-bold text-sm text-center">Word / Docs</span></div>
+            <div class="tool-card bg-gray-50 group"><i class="fas fa-file-excel text-green-700 group-hover:scale-110"></i><span class="font-bold text-sm text-center">Excel / Sheets</span></div>
+            <div class="tool-card bg-gray-50 group"><i class="fas fa-file-powerpoint text-orange-700 group-hover:scale-110"></i><span class="font-bold text-sm text-center">PPT / Slides</span></div>
+            <div class="tool-card bg-gray-50 group"><i class="fas fa-align-left text-purple-700 group-hover:scale-110"></i><span class="font-bold text-sm text-center">Forms</span></div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-32 px-6">
+    <div class="max-w-4xl mx-auto glass p-12 rounded-[3rem] text-center space-y-8">
+        <h2 class="text-5xl font-black tracking-tighter italic uppercase">READY TO <span class="text-brand-blue">HIRE?</span></h2>
+        <p class="text-gray-400 text-lg">Looking for a reliable partner to handle your tech and social needs.</p>
+        <button onclick="toggleModal(true)" class="bg-white text-black px-12 py-5 rounded-full font-black text-lg hover:bg-brand-blue transition shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+            GET IN TOUCH
+        </button>
+    </div>
+</section>
+
+<footer class="py-20 text-center border-t border-white/5">
+    <div class="flex justify-center gap-8 mb-8">
+        <a href="https://github.com/JohnPaulTriumfante/JohnPaulTriumfante2" target="_blank" class="text-3xl text-gray-500 hover:text-brand-blue transition"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/johnpauul18" target="_blank" class="text-3xl text-gray-500 hover:text-brand-blue transition"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/pauul.cdi/" target="_blank" class="text-3xl text-gray-500 hover:text-brand-blue transition"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p class="text-gray-600 text-xs tracking-widest uppercase font-bold italic">Designed by John Paul &copy; 2024</p>
+</footer>
+
+<div id="modal" class="fixed inset-0 bg-brand-dark/95 backdrop-blur-xl hidden items-center justify-center z-[100] p-4">
+    <div class="w-full max-w-md bg-white/5 border border-white/10 p-8 rounded-[2rem] text-center relative animate-fade-in-up">
+        <button onclick="toggleModal(false)" class="absolute top-6 right-6 text-gray-500 hover:text-white transition">
+            <i class="fas fa-times text-xl"></i>
+        </button>
+
+        <div class="mb-8">
+            <div class="w-24 h-24 bg-brand-blue/20 rounded-full flex items-center justify-center mx-auto mb-4 p-1 overflow-hidden">
+                <img src="pic/WTH.jpg" alt="A fun picture of John Paul" class="w-full h-full object-cover rounded-full border-2 border-brand-blue shadow-lg">
+            </div>
+            <h3 class="text-3xl font-black italic tracking-tighter uppercase">LET'S CONNECT</h3>
+            <p class="text-gray-400 text-sm mt-2">I'll do my best to respond promptly!</p>
+        </div>  
+
+        <div class="space-y-4">
+            <div class="group flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/5 hover:border-brand-blue/40 transition">
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-envelope text-brand-blue"></i>
+                    <div class="text-left">
+                        <p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Email Address</p>
+                        <p class="text-sm font-medium">johnpaul.triumfante118@gmail.com</p>
+                    </div>
+                </div>
+                <button onclick="copyText('johnpaul.triumfante118@gmail.com')" class="text-gray-500 hover:text-white transition" title="Copy Email">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+
+            <div class="group flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/5 hover:border-brand-blue/40 transition">
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-phone text-brand-blue"></i>
+                    <div class="text-left">
+                        <p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Phone / Mobile</p>
+                        <p class="text-sm font-medium">+63 961 820 7118</p>
+                    </div>
+                </div>
+                <button onclick="copyText('+63 961 820 7118')" class="text-gray-500 hover:text-white transition" title="Copy Number">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function copyText(text) {
+        navigator.clipboard.writeText(text);
+        alert("Copied to clipboard: " + text);
+    }
+
+    function toggleModal(show) {
+        const modal = document.getElementById('modal');
+        if (show) {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        } else {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+    }
+</script>
+
+</body>
+</html>
